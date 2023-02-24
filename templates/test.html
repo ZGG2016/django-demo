@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<span>test5test5test5</span>
+
+<h2>PublisherListView</h2>
+<ul>
+{#    {% for publisher in object_list %}#}
+    {% for publisher in my_favorite_publishers %}
+        <li>{{ publisher.name }}</li>
+        <a href="{{ publisher.get_absolute_url }}"> publisher.name </a>
+    {% endfor %}
+</ul>
+
+<h2>PublisherDetailView</h2>
+<ul>
+    {% for book in book_list %}
+        <li>{{ book.title }}</li>
+    {% endfor %}
+</ul>
+
+<h2>PublisherListView2</h2>
+<ul>
+    {% for publisher in my_favorite_publishers2 %}
+        <li>{{ publisher.name }}</li>
+    {% endfor %}
+</ul>
+
+<h2>AuthorListView</h2>
+<ul>
+    {% for book in book_list %}
+        <li>{{ book.title }}</li>
+    {% endfor %}
+</ul>
+
+<h2>AuthorDetailView</h2>
+<ul>
+    <li>{{ object.name }}</li>
+    <li>{{ object.email }}</li>
+    <li>{{ object.last_accessed }}</li>
+</ul>
+
+{#TODO 反向解析#}
+<a href="{% url 'blog:author-detail' 1 %}"> 反向解析 </a>
+
+<h2>PersonDetailView</h2>
+<ul>
+    <li>{{ person.name }}</li>
+    <li>{{ person.email }}</li>
+    <li>{{ person.url }}</li>
+    <li>{{ person.text }}</li>
+    <li>{{ person.login_time }}</li>
+</ul>
+
+{#TODO 分页#}
+{#<h2>内置分页</h2>#}
+{#{% for author in author_list %}#}
+{#    {{ author.name |upper }}#}
+{#{% endfor %}#}
+{#<div class="pagination">#}
+{#    <span class="step-links">#}
+{#        {% if page_obj.has_previous %}#}
+{#            <a href="?page=1">&laquo; first</a>#}
+{#            <a href="?page={{ page_obj.previous_page_number }}">previous</a>#}
+{#        {% endif %}#}
+{#        <span class="current">#}
+{#            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}#}
+{#            {% if page_obj.has_next %}#}
+{#                <a href="?page={{ page_obj.next_page_number }}">next</a>#}
+{#                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>#}
+{#            {% endif %}#}
+{#        </span>#}
+{#    </span>#}
+{#</div>#}
+
+{#TODO django-pure-pagination 分页#}
+<h2>django-pure-pagination分页</h2>
+{% if is_paginated %}
+    {{ page_obj.render }}
+{% endif %}
+</body>
+</html>

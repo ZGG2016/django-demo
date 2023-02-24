@@ -1,0 +1,17 @@
+pip install pipenv
+
+pipenv install
+
+pipenv shell
+
+pipenv install django==版本
+
+pipenv run django-admin startproject django-demo F:\CODE\demo\django-demo
+
+pipenv run python manage.py runserver
+
+pipenv run python manage.py startapp blog
+
+pipenv run python manage.py createsuperuser   {zhangsan  blog2023}
+
+pipenv install django-pure-pagination

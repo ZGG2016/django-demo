@@ -1,17 +1,17 @@
-[[source]]
-url = "https://pypi.org/simple"
-verify_ssl = true
-name = "pypi"
-
-[[source]]
-url = "http://pypi.douban.com/simple/"
-verify_ssl = false
-name = "pypidouban"
-
-[[source]]
-url = "https://pypi.douban.com/simple/"
-verify_ssl = true
-name = "pypidouban-123"
+#[[source]]
+#url = "https://pypi.org/simple"
+#verify_ssl = true
+#name = "pypi"
+#
+#[[source]]
+#url = "http://pypi.douban.com/simple/"
+#verify_ssl = false
+#name = "pypidouban"
+#
+#[[source]]
+#url = "https://pypi.douban.com/simple/"
+#verify_ssl = true
+#name = "pypidouban-123"
 
 [[source]]
 url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
@@ -19,7 +19,7 @@ verify_ssl = true
 name = "pypitunatsinghuaedu"
 
 [packages]
-django = {version = "==4.0.9", index = "pypidouban"}
+django = "==4.0.9"
 pymysql = "*"
 pillow = "*"
 django-pure-pagination = {version = "*", index = "pypitunatsinghuaedu"}

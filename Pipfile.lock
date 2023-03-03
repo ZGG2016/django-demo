@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "db56171c628290c8955360f7593ae564a34254ec93e6b21699fcfed0edd8fa91"
+            "sha256": "b3cd6d10c8e0cf4fa25eeffcf07635d14f994964df6a0c24e140d47ebabdc091"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -9,14 +9,9 @@
         },
         "sources": [
             {
-                "name": "pypi",
-                "url": "https://pypi.org/simple",
+                "name": "pypitunatsinghuaedu",
+                "url": "https://pypi.tuna.tsinghua.edu.cn/simple/",
                 "verify_ssl": true
-            },
-            {
-                "name": "pypidouban",
-                "url": "http://pypi.douban.com/simple/",
-                "verify_ssl": false
             }
         ]
     },
@@ -56,9 +51,15 @@
                 "sha256:6ddab9f9ac9211e2dc544819b87343b49c53f99d882e68727b38fd44204f752e",
                 "sha256:7cc034a72f99536c5feb39d1575f2952b86ffa409f109efeb2c8b398985f78a7"
             ],
-            "index": "pypidouban",
-            "markers": null,
+            "index": "pypitunatsinghuaedu",
             "version": "==4.0.9"
+        },
+        "django-pure-pagination": {
+            "hashes": [
+                "sha256:02b42561b8afb09f1fb6ac6dc81db13374f5f748640f31c8160a374274b54713"
+            ],
+            "index": "pypitunatsinghuaedu",
+            "version": "==0.3.0"
         },
         "pillow": {
             "hashes": [
@@ -140,7 +141,7 @@
                 "sha256:f715c32e774a60a337b2bb8ad9839b4abf75b267a0f18806f6f4f5f1688c4b5a",
                 "sha256:fb5c1ad6bad98c57482236a21bf985ab0ef42bd51f7ad4e4538e89a997624e12"
             ],
-            "index": "pypi",
+            "index": "pypitunatsinghuaedu",
             "version": "==9.4.0"
         },
         "pymysql": {
@@ -148,7 +149,7 @@
                 "sha256:41fc3a0c5013d5f039639442321185532e3e2c8924687abe6537de157d403641",
                 "sha256:816927a350f38d56072aeca5dfb10221fe1dc653745853d30a216637f5d7ad36"
             ],
-            "index": "pypi",
+            "index": "pypitunatsinghuaedu",
             "version": "==1.0.2"
         },
         "sqlparse": {

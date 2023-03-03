@@ -20,6 +20,7 @@ from pure_pagination import PaginationMixin
 from blog.forms import PersonForm
 from blog.models import Publisher, Book, Author, Person, Reporter, Article, Publication, Article2, Person2, Group, \
     Membership
+from blog.signals import PizzaStore
 
 
 def test1(request, year=0, foo='foo'):
@@ -175,7 +176,7 @@ def show_form(request):
 def save_person(request):
 
     form = PersonForm(request.POST)
-    print(form)
+    # print(form)
     if form.is_valid():
         person = form.save(commit=False)
         person.save()
@@ -246,7 +247,12 @@ class PagListView2(PaginationMixin, ListView):
     model = Author
 
 
+# TODO 自定义信号
+def test_signal(request):
+    ps = PizzaStore(addr="beijing")
+    ps.send_pizza()
 
+    return HttpResponse("test_signal............")
 
 
 

@@ -46,4 +46,7 @@ urlpatterns = [
     path('paginator/2/', PagListView.as_view()),
     path('paginator/3/', views.paglisting),
     path('paginator/4/', PagListView2.as_view()),
+
+    # TODO 自定义信号
+    path('signal/1/', views.test_signal)
 ]
